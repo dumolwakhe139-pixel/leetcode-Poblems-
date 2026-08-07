@@ -3,6 +3,7 @@ class Solution:
         a = []
         left =0  
         count = 0
+        maxlen = 0
         n = len(nums)
         for right in range(n):
             if nums[right]==0:
@@ -11,7 +12,7 @@ class Solution:
                 if nums[left] ==0:
                     count -= 1
                 left +=1
-            a.append(right - left + 1)
-        return max(a)
+            maxlen = max(maxlen , right - left +1)
+        return maxlen 
 
         
